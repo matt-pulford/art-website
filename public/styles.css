@@ -3,39 +3,54 @@ body {
   font-family: 'Abril Fatface', serif;
   background-color: #FFFFFF;
   background-image: url('/images/texture.png');
+  padding: 0;
+  margin: 0;
 }
 
 /* Navbar */
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  height: 150px;
+.navbar {
   background-color: #00000010;
 }
 
 /* Nav Item */
 
+nav, .navbar, .container-fluid {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+.container-fluid {
+  margin: -5 0;
+}
+
+.navbar-brand {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: -10px;
+  font-size: 4rem;
+}
+
+.navbar-header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar-header {
+  padding: 0;
+  margin: 0;
+}
+
 .nav-item {
-  display: inline;
-  font-size: 1.5rem;
-  padding: 5px 90px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  font-size: 1.2rem;
+  padding: 0px 70px;
 }
 
 .nav-item:hover {
   background-color: #FFFFFF50;
 }
 
-.first {
-  border-right: none;
-}
-
-.last {
-  border-left: none;
-}
 
 
 /* Main Section Grid */
@@ -189,11 +204,18 @@ body {
   }
 }
 
+
+/* Small Screen Meaia Quiries */
+
 @media (max-width: 1023px) {
   .b {
     background-image: url('/images/peice-3.png');
   }
 
+  .b:hover {
+    background-image: url('/images/peice-3.png');
+    transition: none; /* Remove transition on hover */
+  }
   .e, .f {
     display: none;
   }
