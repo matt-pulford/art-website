@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+  font-family: 'Abril Fatface', serif;
+  background-color: #FFFFFF;
+  background-image: url('/images/texture.png');
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 150px;
+  background-color: #00000010;
+}
+
+/* Nav Item */
+
+.nav-item {
+  display: inline;
+  font-size: 1.5rem;
+  padding: 5px 90px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.nav-item:hover {
+  background-color: #FFFFFF50;
+}
+
+.first {
+  border-right: none;
+}
+
+.last {
+  border-left: none;
+}
+
+
+/* Main Section Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+  height: 75vh;
+  max-width: 1400px;
+  margin: 20px auto;
+  margin-top: 6rem;
+  padding: 10px;
+}
+
+.a, .b, .c, .d, .g {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.a {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 3;
+  background-image: url('/images/peice-1.png');
+}
+
+.b {
+  grid-column: 4 / span 3;
+  grid-row: 1 / span 2;
+  margin-right: -10px;
+  background-color: #000;
+  position: relative;
+
+}
+
+/* Additional styles for the .name div */
+.name {
+  position: absolute;
+  color: whitesmoke;
+  bottom: -22px;
+  right: -8px;
+}
+
+.name h1 {
+  font-size: 6rem;
+  padding: 0;
+  margin: 0;
+}
+
+.first-name {
+  bottom: 53px;
+}
+
+.c {
+  grid-column: 5 / span 3;
+  grid-row: 3 / span 3;
+  background-image: url('/images/peice-10.png');
+
+}
+
+.d {
+  grid-column: 2 / span 3;
+  grid-row: 4 / span 2;
+  background-image: url('/images/peice-4.png');
+
+}
+
+.e {
+  grid-column: 4 / span 1;
+  grid-row: 3 / span 1;
+  background-color: #000;
+  position: relative;
+}
+
+/* Additional styles for Gallery Text */
+
+.gallery {
+  bottom: -8px;
+  right: -2px;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.f {
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 2;
+  background-color: #000;
+  position: relative;
+}
+
+.g {
+  grid-column: 4 / span 1;
+  grid-row: 3 / span 3;
+  background-image: url('/images/peice-5.png');
+}
+
+/* Additional styles for Contact Text */
+
+.contact {
+  bottom: -10px;
+  right: -1px;
+}
+
+.contact h3 {
+  font-size: 2.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+
+.e:hover, .f:hover {
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url('/images/texture.png');
+  transition: background-color 0.6s;
+}
+
+.e:hover .name, .f:hover .name {
+  color: black;
+  transition: color 0.6s;
+}
+
+.b:hover {
+  background-color: #FFFFFF;
+  background-image: url('/images/texture.png');
+  transition: background-color 0.6s;
+}
+
+.b:hover .name {
+  color: black;
+  transition: color 0.6s;
+}
+
+
+/* Largest Screen Media Quieries min-width of 1401px  */
+@media (min-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+  .g {
+    display: none;
+  }
+  .hidden-name {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .b {
+    background-image: url('/images/peice-3.png');
+  }
+
+  .e, .f {
+    display: none;
+  }
+  .d {
+    grid-column: 1 / span 3;
+    grid-row: 4 / span 3;
+    background-image: url('/images/peice-4.png');
+  }
+
+  .c, .g {
+    margin-bottom: -10px;
+  }
+  .name h1 {
+    display: none;
+  }
+}
+
+/* Navbar styles for below 768 */
+@media (max-width: 768px) {
+
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .custom-container {
+            width: 1200px;
+            height: 1000px;
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 5px;
+        }
+
+        .custom-box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+        }
+
+        .custom-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .a {
+            background-image: url('peice-1.png');
+            background-size: cover;
+        }
+
+        .b {
+            text-align: center;
+        }
+
+        .c {
+            background-image: url('peice-3.png');
+            background-size: cover;
+        }
+
+        .d {
+            background-image: url('peice-4.png');
+            background-size: cover;
+        }
+
+        .e {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container custom-container">
+        <div class="custom-box a"></div>
+        <div class="custom-box b">Denis Fafard</div>
+        <div class="custom-box c"></div>
+        <div class="custom-box d"></div>
+        <div class="custom-box e"></div>
+        <div class="custom-box a"></div>
+    </div>
+</body>
+</html>
