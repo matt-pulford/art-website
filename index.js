@@ -4,6 +4,7 @@ import path from 'path';
 import ejs from 'ejs';
 import nodemailer from 'nodemailer';
 import cookieParser from 'cookie-parser';
+import { Route } from 'express';
 
 // Constants
 const app = express();
@@ -42,6 +43,12 @@ const transporter = nodemailer.createTransport({
 app.get('/', (req, res) => {
   res.render('index');
 });
+
+app.get('/contact', (req, res) => {
+  res.render('contact');
+});
+
+
 
 
 

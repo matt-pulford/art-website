@@ -45,8 +45,8 @@ nav, .navbar, .container-fluid {
 }
 
 .nav-item:hover {
-  background-color: #00000010;
-  transition: background-color 0.6s;
+  background-color: #00000025;
+  
 }
 
 
@@ -191,6 +191,57 @@ nav, .navbar, .container-fluid {
 }
 
 
+/* Contact Grid */
+
+.con-a, .con-b, .con-c, .con-e {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.con-a {
+  background-image: url('/images/peice-7.webp');
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 5;
+}
+
+.con-b {
+  background-image: url('/images/peice-8.webp');
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 3;
+}
+
+.con-c {
+  background-image: url('/images/peice-2.webp');
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.con-d {
+  background-color: black;
+  grid-column: 5 / span 2;
+  grid-row: 1 / span 3;
+}
+
+.con-e {
+  background-color: blueviolet;
+  grid-column: 5 / span 2;
+  grid-row: 4 / span 2;
+  background-image: url('/images/peice-9.webp');
+}
+
+/* Form grid within contact grid */
+
+
+/* Footer Area */
+.footer-text {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  font-family: 'Roboto';
+}
+
+
 /* Largest Screen Media Quieries min-width of 1401px  */
 @media (min-width: 1024px) {
   .navbar {
@@ -202,6 +253,7 @@ nav, .navbar, .container-fluid {
   .hidden-name {
     display: none;
   }
+  
 }
 
 
@@ -216,7 +268,7 @@ nav, .navbar, .container-fluid {
     background-image: url('/images/peice-3.webp');
     transition: none; /* Remove transition on hover */
   }
-  .e, .f {
+  .e, .f, .footer-text {
     display: none;
   }
   .d {
