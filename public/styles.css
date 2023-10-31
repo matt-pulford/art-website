@@ -218,7 +218,7 @@ nav, .navbar, .container-fluid {
 }
 
 .con-d {
-  background-color: black;
+  background-color: FFFFFF00;
   grid-column: 5 / span 2;
   grid-row: 1 / span 3;
 }
@@ -239,6 +239,31 @@ nav, .navbar, .container-fluid {
   gap: 10px;
   width: 100%;
   height: 100%;
+}
+
+.contact-form {
+  background-color: brown;
+  grid-column: 1 / span 6;
+  grid-row: 1 /span 4;
+}
+
+.back {
+  background-color: chartreuse;
+  grid-column: 1 /span 2;
+  grid-row: 5 / span 2;
+}
+
+.send {
+  grid-column: 5 / span 2;
+  grid-row:  5/ span 2;
+  background-color: aquamarine;
+}
+
+.nothing {
+  background-color: chocolate;
+  grid-column: 3 / span 2;
+  grid-row: 5 / span 1;
+  margin-bottom: -10px;
 }
 
 /* Footer Area */
