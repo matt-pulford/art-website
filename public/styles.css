@@ -428,10 +428,7 @@ input {
 }
 
 @media (max-width: 425px) {
-  .grid {
-    margin: 20px auto;
-  }
-
+  
   .con-a {
     display: none;
   }
