@@ -58,7 +58,7 @@ nav,
 
 
 
-/* Main Section Grid */
+/* Section Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -441,4 +441,41 @@ input {
     grid-column: 1 / span 6;
     grid-row: 1 / span 5;
   }
+}
+
+
+/* Gallery Grid */
+
+.gallery-a {
+
+  grid-column: 1 /span 3;
+  grid-row: 1 / span 3
+}
+
+.gallery-b {
+
+  grid-column: 4 /span 3;
+  grid-row: 1 / span 3
+}
+
+.gallery-c {
+
+  grid-column: 1 /span 3;
+  grid-row: 4 / span 2;
+
+}
+
+.gallery-d {
+
+  grid-column: 4 /span 3;
+  grid-row: 4 / span 2;
+}
+
+.gallery-a,
+.gallery-b,
+.gallery-c,
+.gallery-d {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

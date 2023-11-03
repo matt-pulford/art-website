@@ -4,7 +4,7 @@ import path from 'path';
 import ejs from 'ejs';
 import nodemailer from 'nodemailer';
 import cookieParser from 'cookie-parser';
-import { Route } from 'express';
+import fs from 'fs';
 
 // Constants
 const app = express();
@@ -46,6 +46,37 @@ app.get('/', (req, res) => {
 
 app.get('/contact', (req, res) => {
   res.render('contact');
+});
+
+app.get('/gallery', (req, res) => {
+  // 1. Retrieve a list of images (use fs.readdirSync and filter for image files)
+  const imageFiles = fs.readdirSync('./public/images').filter(file => file.endsWith('.webp'));
+
+  // 2. Pagination logic
+  const itemsPerPage = 4;
+  const currentPage = req.query.page || 1;
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const imagesOnPage = imageFiles.slice(startIndex, endIndex);
+
+  // 3. Display images in the gallery sections
+  const gallerySections = ['gallery-a', 'gallery-b', 'gallery-c', 'gallery-d'];
+  const imageUrls = imagesOnPage.map((image, index) => {
+    return { section: gallerySections[index], url: `/images/${image}` };
+  });
+
+  // 4. Page controls (Next and Previous Buttons)
+  const totalPages = Math.ceil(imageFiles.length / itemsPerPage);
+  const hasPrevious = currentPage > 1;
+  const hasNext = currentPage < totalPages;
+
+  res.render('gallery', {
+    imageUrls,
+    hasPrevious,
+    hasNext,
+    currentPage,
+  });
 });
 
 
