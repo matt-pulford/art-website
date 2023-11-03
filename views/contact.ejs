@@ -5,18 +5,47 @@
         <div class="con-a"></div>
         <div class="con-b"></div>
         <div class="con-c"></div>
-        <div class="con-d form-container">
-            <div class="contact-form"></div>
-            <div class="back"></div>
-            <div class="send"></div>
-            <div class="nothing"></div>
+        <div class="con-d">
+            <div class="form-container">
+                <form id="contact-form" action="/contact" method="post">
+                    <h3 class="form-top">Contact</h3>
+                    <div class="form-input">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="form-input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="form-input">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject">
+                    </div>
+                    <div class="form-input">
+                        <label for="message">Message</label>
+                        <textarea name="message" rows="4" cols="48"></textarea>
+                    </div>
+                    <button type="submit" class="contact-button">Send</button>
+                </form>
+            </div>            
         </div>
         <div class="con-e"></div>
     </div>
 </div> 
-
 <div class="footer-text">
     <h6>© 2023 Matt Pulford</h6>
 </div>
 
 <%- include('footer') %>
+
+<style>
+    @media (max-width: 2600px) {
+  .navbar {
+    display: none;
+  }
+
+  .hidden-name {
+    display: none;
+  }
+}
+</style>
