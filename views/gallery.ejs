@@ -4,7 +4,7 @@
     <div class="grid">
         <% imageUrls.forEach(image => { %>
             <div class="<%= image.section %>">
-                <a href="<%= image.url %>">
+                <a href="/image/<%= encodeURIComponent(image.url) %>">
                     <img src="<%= image.url %>" alt="Image" style="object-fit: cover; width: 100%; height: 100%;">
                 </a>
             </div>
@@ -23,8 +23,8 @@
             <% } %>
         </div>
     </div>
-    
 </div>
+
 
 <%- include('footer') %>
 

@@ -509,3 +509,16 @@ input {
 .nav-buttons {
   order: 2; 
 }
+
+.image-controls {
+  display: flex;
+  justify-content: center;
+  align-items:baseline;
+}
+/* Full Size Page */
+.full-sized-image {
+  max-width: auto; /* Set the maximum width to 70% of the viewport width */
+  height: 90vh;     /* Maintain the image's aspect ratio */
+  display: block;   /* Remove any extra spacing around the image */
+  margin: 10px auto 10px auto;   /* Center the image horizontally in the container */
+}

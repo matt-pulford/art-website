@@ -79,6 +79,13 @@ app.get('/gallery', (req, res) => {
   });
 });
 
+app.get('/image/:imageURL', (req, res) => {
+  const imageURL = decodeURIComponent(req.params.imageURL);
+  res.render('image', { image: { url: imageURL } });
+});
+
+
+
 
 // Contact Post Route
 app.post('/contact', (req, res) => {
