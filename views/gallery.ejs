@@ -4,18 +4,26 @@
     <div class="grid">
         <% imageUrls.forEach(image => { %>
             <div class="<%= image.section %>">
-                <img src="<%= image.url %>" alt="Image" style="object-fit: cover; width: 100%; height: 100%;">
+                <a href="<%= image.url %>">
+                    <img src="<%= image.url %>" alt="Image" style="object-fit: cover; width: 100%; height: 100%;">
+                </a>
             </div>
         <% }); %>
     </div>
     <div class="page-controls">
-        <% if (hasPrevious) { %>
-            <a href="/gallery?page=<%= parseInt(currentPage) - 1 %>" class="button">Previous</a>
-        <% } %>
-        <% if (hasNext) { %>
-            <a href="/gallery?page=<%= parseInt(currentPage) + 1 %>" class="button">Next</a>
-        <% } %>
+        <div class="home-button">
+            <a href="/" class="page-buttons">Home</a>
+        </div>
+        <div class="nav-buttons">
+            <% if (hasPrevious) { %>
+                <a href="/gallery?page=<%= parseInt(currentPage) - 1 %>" class="page-buttons">Previous</a>
+            <% } %>
+            <% if (hasNext) { %>
+                <a href="/gallery?page=<%= parseInt(currentPage) + 1 %>" class="page-buttons">Next</a>
+            <% } %>
+        </div>
     </div>
+    
 </div>
 
 <%- include('footer') %>

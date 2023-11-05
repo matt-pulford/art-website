@@ -39,20 +39,22 @@ const transporter = nodemailer.createTransport({
 });
 
 
+
 // Define routes
+// Home Route
+
 app.get('/', (req, res) => {
   res.render('index');
 });
 
+// Contact
 app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
+// Gallery
 app.get('/gallery', (req, res) => {
-  // 1. Retrieve a list of images (use fs.readdirSync and filter for image files)
   const imageFiles = fs.readdirSync('./public/images').filter(file => file.endsWith('.webp'));
-
-  // 2. Pagination logic
   const itemsPerPage = 4;
   const currentPage = req.query.page || 1;
 
@@ -60,13 +62,11 @@ app.get('/gallery', (req, res) => {
   const endIndex = startIndex + itemsPerPage;
   const imagesOnPage = imageFiles.slice(startIndex, endIndex);
 
-  // 3. Display images in the gallery sections
   const gallerySections = ['gallery-a', 'gallery-b', 'gallery-c', 'gallery-d'];
   const imageUrls = imagesOnPage.map((image, index) => {
     return { section: gallerySections[index], url: `/images/${image}` };
   });
 
-  // 4. Page controls (Next and Previous Buttons)
   const totalPages = Math.ceil(imageFiles.length / itemsPerPage);
   const hasPrevious = currentPage > 1;
   const hasNext = currentPage < totalPages;
@@ -80,14 +80,10 @@ app.get('/gallery', (req, res) => {
 });
 
 
-
-
-
 // Contact Post Route
 app.post('/contact', (req, res) => {
   const { name, email, subject, message } = req.body;
 
-  // Create email data
   const mailOptions = {
       from: '"HKC Contact " <mattyp666@outlook.com>', // Use the Outlook email address as the sender
       to: 'mattpsender@gmail.com', // Recipient's email address
@@ -95,7 +91,6 @@ app.post('/contact', (req, res) => {
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
   };
 
-  // Send the email
   transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
           console.error(error);
