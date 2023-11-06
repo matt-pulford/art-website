@@ -52,7 +52,7 @@
   /* Navbar styles for below 768 */
   @media (max-width: 1023px) {
     .grid {
-      margin: 100px auto;
+      margin: auto;
     }
   }
   

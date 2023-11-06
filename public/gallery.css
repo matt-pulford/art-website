@@ -54,12 +54,7 @@
   .home-button {
     order: 1;
   }
-  
-  .home-button > a {
-    margin: 0;
-    padding: 0;
-  }
-  
+    
   .nav-buttons {
     order: 2; 
   }
