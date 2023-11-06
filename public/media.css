@@ -1,0 +1,136 @@
+/* Index Media Queries */
+/* Media Quieries min-width of 1401px  */
+@media (min-width: 1024px) {
+    .navbar {
+      display: none;
+    }
+  
+    .g {
+      display: none;
+    }
+  
+    .hidden-name {
+      display: none;
+    }
+  }
+  
+  
+  /* Small Screen Meaia Quiries */
+  
+  @media (max-width: 1023px) {
+    .b {
+      background-image: url('/images/peice-3.webp');
+    }
+  
+    .b:hover {
+      background-image: url('/images/peice-3.webp');
+      transition: none;
+    }
+  
+    .e,
+    .f,
+    .footer-text {
+      display: none;
+    }
+  
+    .d {
+      grid-column: 1 / span 3;
+      grid-row: 4 / span 3;
+      background-image: url('/images/peice-4.webp');
+    }
+  
+    .c,
+    .g {
+      margin-bottom: -10px;
+    }
+  
+    .name h1 {
+      display: none;
+    }
+  }
+  
+  /* Navbar styles for below 768 */
+  @media (max-width: 1023px) {
+    .grid {
+      margin: 100px auto;
+    }
+  }
+  
+  /* Media Query for screens below 425px */
+  @media (max-width: 500px) {
+    .navbar {
+      text-align: center;
+    }
+  
+    .navbar-brand {
+      position: static;
+      font-size: 2rem;
+    }
+  
+    .navbar-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 10px;
+    }
+  
+    .nav-item {
+      padding: 0 10px;
+    }
+  
+  }
+  
+  /* Contact Form Media Queries */
+  @media (max-height: 920px) {
+    .con-e {
+      display: none;
+    }
+  
+    .con-d {
+      grid-row: 1 / span 5;
+    }
+  }
+  
+  @media (max-width: 1400px) {
+    .con-b {
+      display: none;
+    }
+  
+    .con-c {
+      display: none;
+    }
+  
+    .con-a {
+      grid-column: 1 / span 3;
+    }
+  
+    .con-d {
+      grid-column: 4 / span 3;
+  
+    }
+  
+    .con-e {
+      grid-column: 4 /span 3;
+    }
+  
+    .form-container {
+      max-width: none;
+      margin: 5px 5px;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    
+    .con-a {
+      display: none;
+    }
+  
+    .con-e {
+      display: none;
+    }
+  
+    .con-d {
+      grid-column: 1 / span 6;
+      grid-row: 1 / span 5;
+    }
+  }
