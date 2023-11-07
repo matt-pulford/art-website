@@ -4,14 +4,14 @@
 <div class="container">
     <div class="grid">
         <% imageUrls.forEach(image => { %>
-            <div class="<%= image.section %>">
-                <a class="gallery-image" href="/image/<%= encodeURIComponent(image.url) %>">
-                    <img src="<%= image.url %>" alt="Image" style="object-fit: cover; width: 100%; height: 100%;">
-                    <div class="image-overlay">
-                      <p>Click for Full Size</p>
-                    </div>
-                </a>
-            </div>
+        <div class="<%= image.section %>">
+            <a class="gallery-image" href="/image/<%= encodeURIComponent(image.url) %>">
+                <img src="<%= image.url %>" alt="Image" style="object-fit: cover; width: 100%; height: 100%;">
+                <div class="image-overlay">
+                    <p>Click for Full Size</p>
+                </div>
+            </a>
+        </div>
         <% }); %>
     </div>
     <div class="container page-controls">
@@ -20,10 +20,10 @@
         </div>
         <div class="nav-buttons">
             <% if (hasPrevious) { %>
-                <a href="/gallery?page=<%= parseInt(currentPage) - 1 %>" class="page-buttons">Previous</a>
+            <a href="/gallery?page=<%= parseInt(currentPage) - 1 %>" class="page-buttons">Previous</a>
             <% } %>
             <% if (hasNext) { %>
-                <a href="/gallery?page=<%= parseInt(currentPage) + 1 %>" class="page-buttons">Next</a>
+            <a href="/gallery?page=<%= parseInt(currentPage) + 1 %>" class="page-buttons">Next</a>
             <% } %>
         </div>
     </div>
@@ -31,14 +31,12 @@
 
 <style>
     .navbar {
-    display: none;
-  }
+        display: none;
+    }
 
-  .hidden-name {
-    display: none;
-  }
+    .hidden-name {
+        display: none;
+    }
 </style>
 
 <%- include('footer') %>
-
-
