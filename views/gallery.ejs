@@ -20,7 +20,7 @@
         </div>
         <div class="nav-buttons">
             <% if (hasPrevious) { %>
-            <a href="/gallery?page=<%= parseInt(currentPage) - 1 %>" class="page-buttons">Previous</a>
+            <a href="/gallery?page=<%= parseInt(currentPage) - 1 %>" class="page-buttons prev-button">Previous</a>
             <% } %>
             <% if (hasNext) { %>
             <a href="/gallery?page=<%= parseInt(currentPage) + 1 %>" class="page-buttons">Next</a>

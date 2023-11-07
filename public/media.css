@@ -53,6 +53,7 @@
   @media (max-width: 1023px) {
     .grid {
       margin: auto;
+      margin-top: 3rem;
     }
   }
   
