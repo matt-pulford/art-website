@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 const cookieParser = require('cookie-parser');
 const fs = require('fs');
 const dotenv = require('dotenv');
-const helmet = require('helmet'); // Added Helmet
+// const helmet = require('helmet'); // Added Helmet
 
 dotenv.config();
 
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(helmet()); // Use Helmet
+// app.use(helmet()); // Use Helmet
 
 // Create nodemailer transporter
 const transporter = nodemailer.createTransport({
@@ -51,7 +51,7 @@ app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
-// Gallery
+// Gallery Route
 app.get('/gallery', (req, res) => {
   const imageFiles = fs.readdirSync('./public/images').filter(file => file.endsWith('.webp'));
   const itemsPerPage = 4;
@@ -78,6 +78,7 @@ app.get('/gallery', (req, res) => {
   });
 });
 
+// Image Route
 app.get('/image/:imageURL', (req, res) => {
   const imageURL = decodeURIComponent(req.params.imageURL);
   res.render('image', { image: { url: imageURL } });
